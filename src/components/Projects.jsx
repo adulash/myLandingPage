@@ -35,13 +35,7 @@ const projects = [
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80",
   },
   {
-    title: "بطاقة بروفايل - Jessica Randall",
-    desc: "تحدي CSS أولي لإنشاء بطاقة بروفايل اجتماعية بسيطة وأنيقة. يتضمن روابط وسائل التواصل الاجتماعي وتصميم متجاوب.",
-    link: "https://adulash.github.io/my_first_css/",
-    tags: ["CSS", "Profile Card", "Frontend Mentor"],
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=500&auto=format&fit=crop&q=80",
-  },
+ 
   {
     title: "موقع بروفايل - أبو سريع",
     desc: "تطوير موقع بروفايل احترافي للمطور محمد أبو سريع. يتضمن قسم المهارات، المشاريع، آراء العملاء، وإمكانية التبديل بين الثيمات الفاتحة والداكنة.",
