@@ -8,6 +8,9 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
+# Verify build output exists
+RUN test -f /app/dist/index.html && echo "Build successful" || (echo "Build failed" && exit 1)
+
 FROM nginx:alpine
 
 COPY --from=builder /app/dist /usr/share/nginx/html
