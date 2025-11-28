@@ -1,0 +1,35 @@
+[phases.setup]
+nixPkgs = ["nodejs_22", "npm-9_x"]
+
+[phases.install]
+cmds = ["npm ci"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[staticAssets]
+Caddyfile = """
+{
+    admin off
+    auto_https off
+}
+
+:{$PORT:3000} {
+    root * /app/dist
+    encode gzip
+    file_server
+    
+    # Fix MIME types for JavaScript modules
+    @js {
+        path *.js
+    }
+    header @js Content-Type "application/javascript; charset=utf-8"
+    
+    # SPA routing
+    try_files {path} /index.html
+}
+"""
+
+[start]
+cmd = "caddy run --config /assets/Caddyfile --adapter caddyfile"
+
