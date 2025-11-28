@@ -74,7 +74,7 @@ const Hero = () => {
               </span>
               <span className="code-line" style={{ paddingLeft: "1.5rem" }}>
                 <span className="property">role</span>:{" "}
-                <span className="string">&apos;Fullstack Dev&apos;</span>,
+                <span className="string">&apos;Web Fullstack Dev&apos;</span>,
               </span>
               <span className="code-line" style={{ paddingLeft: "1.5rem" }}>
                 <span className="property">skills</span>: <span className="bracket">[</span>
